@@ -11,8 +11,7 @@ const hobbyInput = document.getElementById("new-hobby");
 const hobbyList = document.getElementById("hobby-list");
 
 function showProfile() {
-  const currentYear = new Date().getFullYear();
-  const age = currentYear - userProfile.birthYear;
+  const age = new Date().getFullYear() - userProfile.birthYear;
 
   document.getElementById("profile-name").textContent = userProfile.name;
   document.getElementById("profile-year").textContent = userProfile.birthYear;
@@ -22,16 +21,6 @@ function showProfile() {
 
   console.log("Profile:", userProfile);
   console.log("Age:", age, "Hobbies count:", userProfile.hobbies.length);
-}
-
-function addListItem(hobby) {
-  const item = document.createElement("li");
-  item.textContent = hobby;
-  hobbyList.appendChild(item);
-}
-
-for (const hobby of userProfile.hobbies) {
-  addListItem(hobby);
 }
 
 showProfile();
@@ -44,11 +33,12 @@ document.getElementById("profile-form").addEventListener("submit", function (eve
   document.getElementById("profile").style.backgroundColor = "#f2f2f2";
 });
 
-document.getElementById("hobby-form").addEventListener("submit", function (event) {
-  event.preventDefault();
+document.getElementById("add-item").addEventListener("click", function () {
   const hobby = hobbyInput.value;
+  const item = document.createElement("li");
+  item.textContent = hobby;
+  hobbyList.appendChild(item);
   userProfile.hobbies.push(hobby);
-  addListItem(hobby);
   showProfile();
 });
 
