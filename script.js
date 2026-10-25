@@ -10,10 +10,6 @@ const birthYearInput = document.getElementById("birth-year");
 const hobbyInput = document.getElementById("new-hobby");
 const hobbyList = document.getElementById("hobby-list");
 
-birthYearInput.max = new Date().getFullYear();
-usernameInput.value = userProfile.name;
-birthYearInput.value = userProfile.birthYear;
-
 function showProfile() {
   const currentYear = new Date().getFullYear();
   const age = currentYear - userProfile.birthYear;
@@ -42,13 +38,7 @@ showProfile();
 
 document.getElementById("profile-form").addEventListener("submit", function (event) {
   event.preventDefault();
-  const username = usernameInput.value.trim();
-
-  if (username === "") {
-    return;
-  }
-
-  userProfile.name = username;
+  userProfile.name = usernameInput.value;
   userProfile.birthYear = Number(birthYearInput.value);
   showProfile();
   document.getElementById("profile").style.backgroundColor = "#f2f2f2";
@@ -56,15 +46,9 @@ document.getElementById("profile-form").addEventListener("submit", function (eve
 
 document.getElementById("hobby-form").addEventListener("submit", function (event) {
   event.preventDefault();
-  const hobby = hobbyInput.value.trim();
-
-  if (hobby === "") {
-    return;
-  }
-
+  const hobby = hobbyInput.value;
   userProfile.hobbies.push(hobby);
   addListItem(hobby);
-  hobbyInput.value = "";
   showProfile();
 });
 

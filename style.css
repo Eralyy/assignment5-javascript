@@ -9,7 +9,6 @@ main {
   max-width: 640px;
   margin: 20px auto;
   padding: 0 16px;
-  overflow-wrap: anywhere;
 }
 
 h1 {
@@ -23,7 +22,6 @@ h2 {
 section {
   margin-top: 24px;
   padding-top: 8px;
-  border-top: 1px solid #ccc;
 }
 
 p {
@@ -49,5 +47,4 @@ button {
   font: inherit;
   padding: 5px 10px;
   margin-bottom: 4px;
-  cursor: pointer;
 }
