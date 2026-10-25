@@ -4,12 +4,6 @@
 
 **Group:** IT-2501
 
-Website: https://eralyy.github.io/assignment5-javascript/
-
-Repository: https://github.com/Eralyy/assignment5-javascript
-
-Open "index.html" in a browser.
-
 ## Part 1: Profile Object, Data Types and Arithmetic
 
 ### Task 1. User Profile Object
