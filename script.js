@@ -1,8 +1,8 @@
 const userProfile = {
   name: "Yerali",
   birthYear: 2007,
-  isDeveloper: false,
-  hobbies: ["Reading", "Football"]
+  isDeveloper: true,
+  hobbies: ["Volleyball", "Table Tennis", "Hobby horsing"]
 };
 
 const usernameInput = document.getElementById("username");
